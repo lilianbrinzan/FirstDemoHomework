@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+    <link th:href="@{css/cats.css}" rel="stylesheet">
+    <script th:src="@{js/script.js}" type="text/javascript" defer></script>
+</head>
+<body>
+    <h1>Cat</h1>
+    <table>
+        <tbody>
+        <tr>
+            <th>ID</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr th:each="cat:${cats}">
+            <td th:text="${cat.getId()}"/>
+            <td th:text="${cat.getName()}"/>
+            <td th:text="${cat.getAge()}"/>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>
